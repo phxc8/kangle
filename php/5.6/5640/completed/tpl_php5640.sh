@@ -3,7 +3,7 @@ yum -y install bzip2-devel libxml2-devel curl-devel db4-devel libjpeg-devel libp
 yum -y install mhash-devel openssl-devel
 yum -y install libtool-ltdl libtool-ltdl-devel
 PREFIX="/vhs/kangle/ext"
-wget -c http://github.itzmx.com/1265578519/kangle/master/php/5.6/5640/completed/tpl_php5640.tar.bz2 -O tpl_php5640.tar.bz2
+wget -c https://github.kangle.icu/php/5.6/5640/completed/tpl_php5640.tar.bz2 -O tpl_php5640.tar.bz2
 tar xjf tpl_php5640.tar.bz2
 mv tpl_php5640 $PREFIX
 rm -rf /tmp/*

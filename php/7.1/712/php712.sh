@@ -10,7 +10,7 @@ if test `arch` = "x86_64"; then
         ZEND_ARCH="x86_64"
 fi
 
-wget -c http://github.itzmx.com/1265578519/kangle/master/php/7.1/712/php-7.1.2.tar.bz2 -O php-7.1.2.tar.bz2
+wget -c https://github.kangle.icu/php/7.1/712/php-7.1.2.tar.bz2 -O php-7.1.2.tar.bz2
 tar xjf php-7.1.2.tar.bz2
 cd php-7.1.2
 CONFIG_CMD="./configure --prefix=$PREFIX --with-config-file-scan-dir=$PREFIX/etc/php.d --with-libdir=$LIB --enable-fastcgi --with-mysql --with-mysqli --with-pdo-mysql --with-iconv-dir --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=/usr/include/libxml2/libxml --enable-xml --disable-fileinfo --enable-magic-quotes --enable-safe-mode --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --with-curl --with-curlwrappers --enable-mbregex --enable-mbstring --enable-ftp --with-gd --enable-gd-native-ttf --with-openssl --enable-pcntl --enable-sockets --with-xmlrpc --enable-zip --enable-soap --with-pear --with-gettext --enable-calendar --with-openssl"
@@ -32,17 +32,17 @@ if [ ! -f $PREFIX/php-templete.ini ]; then
         cp php.ini-dist $PREFIX/php-templete.ini
 fi
 if [ ! -f $PREFIX/config.xml ]; then
-        wget http://github.itzmx.com/1265578519/kangle/master/php/7.1/712/config.xml -O $PREFIX/config.xml
+        wget https://github.kangle.icu/php/7.1/712/config.xml -O $PREFIX/config.xml
 fi
 cd ..
-wget http://github.itzmx.com/1265578519/kangle/master/php/7.1/712/php-templete.ini -O $PREFIX/php-templete.ini
+wget https://github.kangle.icu/php/7.1/712/php-templete.ini -O $PREFIX/php-templete.ini
 #install ioncube
-wget -c http://github.itzmx.com/1265578519/kangle/master/php/7.1/712/ioncube-$ZEND_ARCH-5.6.zip
+wget -c https://github.kangle.icu/php/7.1/712/ioncube-$ZEND_ARCH-5.6.zip
 unzip ioncube-$ZEND_ARCH-5.6.zip
 mkdir -p $PREFIX/ioncube
 mv ioncube_loader_lin_5.6.so $PREFIX/ioncube/ioncube_loader_lin_5.6.so
 #install apcu
-wget -c http://github.itzmx.com/1265578519/kangle/master/php/7.1/712/apcu-5.1.3.tgz
+wget -c https://github.kangle.icu/php/7.1/712/apcu-5.1.3.tgz
 tar zxf apcu-5.1.3.tgz
 cd apcu-5.1.3
 /vhs/kangle/ext/tpl_php712/bin/phpize
