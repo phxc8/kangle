@@ -1,13 +1,13 @@
-[Kangle](https://kangle.icu)
+[Kangle.ICU](https://kangle.icu)
 =======
 最低配置安装需求
 本教程至少需要以下配置进行安装
 CPU：单核
-内存：256M
-硬盘：5G或者以上
-网络：独立公网IP
+推荐内存：512M
+推荐硬盘：5G或者以上
+推荐网络：独立公网IP
 操作系统：centos 6 x64
-安装时间：普通VPS大约在2-5分钟左右
+安装时间：普通VPS大约在10-20分钟左右
 
 脚本官方网站:https://kangle.icu
 
@@ -16,13 +16,15 @@ CPU：单核
 easypanel控制面板管理员后台：ip:3312/admin
 帐号：admin
 密码：默认密码请输入代码查看
-查看密码代码:echo "默认密码:$(cat /root/kangle-pw)"
+查看密码代码:
+echo "默认密码:$(cat /root/kangle-pw)"
 
 mysql数据库管理员后台：ip:3313/mysql
 -------
 帐号：root
 密码：默认密码请输入代码查看
-查看密码代码:echo "默认密码:$(cat /root/kangle-pw)"
+查看密码代码:
+echo "默认密码:$(cat /root/kangle-pw)"
 
 想要用mysql的话，一定要先进去3312/admin登录，左边有个服务器设置，把数据库帐号密码填入，并且初始化服务器后即可正常登录mysql使用。
 
