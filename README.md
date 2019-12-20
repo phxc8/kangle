@@ -1,30 +1,30 @@
 [Kangle.ICU](https://kangle.icu)
 =======
 最低配置安装需求
-本教程至少需要以下配置进行安装
-CPU：单核
-推荐内存：512M
-推荐硬盘：5G或者以上
-推荐网络：独立公网IP
-操作系统：centos 6 x64
-安装时间：普通VPS大约在10-20分钟左右
+本教程至少需要以下配置进行安装  
+CPU：单核  
+推荐内存：512M  
+推荐硬盘：5G或者以上  
+推荐网络：独立公网IP  
+操作系统：centos 6 x64  
+安装时间：普通VPS大约在10-20分钟左右  
 
 脚本官方网站:https://kangle.icu
 
 默认登录密码是什么?
 -------
-easypanel控制面板管理员后台：ip:3312/admin
-帐号：admin
-密码：默认密码请输入代码查看
-查看密码代码:
-echo "默认密码:$(cat /root/kangle-pw)"
+easypanel控制面板管理员后台：ip:3312/admin  
+帐号：admin  
+密码：默认密码请输入代码查看  
+查看密码代码:  
+echo "默认密码:$(cat /root/kangle-pw)"  
 
-mysql数据库管理员后台：ip:3313/mysql
+mysql数据库管理员后台：ip:3313/mysql  
 -------
-帐号：root
-密码：默认密码请输入代码查看
-查看密码代码:
-echo "默认密码:$(cat /root/kangle-pw)"
+帐号：root  
+密码：默认密码请输入代码查看  
+查看密码代码:  
+echo "默认密码:$(cat /root/kangle-pw)"  
 
 想要用mysql的话，一定要先进去3312/admin登录，左边有个服务器设置，把数据库帐号密码填入，并且初始化服务器后即可正常登录mysql使用。
 
@@ -36,8 +36,8 @@ kangle web server一键安装包是一个用Linux Shell编写的可以为CentOS 
 
 我们为什么需要它?
 -------
-编译安装需要输入大量的命令，如果是配置生产环境需要耗费大量的时间。
-不会Linux的站长或Linux新手想使用Linux作为生产环境……
+编译安装需要输入大量的命令，如果是配置生产环境需要耗费大量的时间。  
+不会Linux的站长或Linux新手想使用Linux作为生产环境……  
 
 
 它有什么优势?
@@ -47,8 +47,8 @@ kangle web server一键安装包是一个用Linux Shell编写的可以为CentOS 
 
 特别鸣谢
 -------
-感谢小樱(ITZMX.COM)源提供Fork
-基于点点Kangle.pw脚本修改
+感谢小樱(ITZMX.COM)源提供Fork  
+基于点点Kangle.pw脚本修改  
 
 
 kangle web server 更新日志
