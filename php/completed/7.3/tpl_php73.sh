@@ -14,7 +14,7 @@ mv -f /usr/lib64/libzip.so.5 /usr/lib64/libzip.so.5.bak
 ln -s /usr/local/lib/libzip.so.5 /usr/lib64/libzip.so.5
 PREFIX="/vhs/kangle/ext"
 wget -c https://github.kangle.icu/php/completed/7.3/tpl_php73.tar.bz2 -O tpl_php73.tar.bz2
-tar xjf tpl_php73.tar.bz2
+tar -jxvf tpl_php73.tar.bz2
 mv tpl_php73 $PREFIX
 rm -rf /tmp/*
 /vhs/kangle/bin/kangle -r

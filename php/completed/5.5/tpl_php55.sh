@@ -4,7 +4,7 @@ yum -y install mhash-devel openssl-devel
 yum -y install libtool-ltdl libtool-ltdl-devel
 PREFIX="/vhs/kangle/ext"
 wget -c https://github.kangle.icu/php/completed/5.5/tpl_php55.tar.bz2 -O tpl_php55.tar.bz2
-tar xzf tpl_php55.tar.bz2
+tar -jxvf tpl_php55.tar.bz2
 mv tpl_php55 $PREFIX
 rm -rf /tmp/*
 /vhs/kangle/bin/kangle -r
