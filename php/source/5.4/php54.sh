@@ -51,7 +51,7 @@ unzip ioncube-$ZEND_ARCH-5.4.zip
 mkdir -p $PREFIX/ioncube
 mv ioncube_loader_lin_5.4.so $PREFIX/ioncube/ioncube_loader_lin_5.4.so
 #install sg11
-wget https://github.kangle.icu/php/sg11-$ZEND_ARCH/ixed.5.4.lin -O $PREFIX/ixed.6.4.lin
+wget https://github.kangle.icu/php/sg11-$ZEND_ARCH/ixed.5.4.lin -O $PREFIX/ixed.5.4.lin
 #install apcu
 wget -c https://github.kangle.icu/php/source/5.4/apcu-4.0.10.tgz
 tar zxf apcu-4.0.10.tgz
