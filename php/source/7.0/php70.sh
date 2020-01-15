@@ -70,7 +70,7 @@ make -j 4
 make install
 cd ..
 #install memcache
-wget -c https://github.kangle.icu/php/7.1/7125/php-memcache-3.0.9-dev.zip
+wget -c https://github.kangle.icu/php/source/7.0/php-memcache-3.0.9-dev.zip
 unzip -o php-memcache-3.0.9-dev.zip
 cd php-memcache-3.0.9-dev
 /vhs/kangle/ext/tpl_php70/bin/phpize
