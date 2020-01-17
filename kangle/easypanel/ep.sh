@@ -111,7 +111,7 @@ function setup_kangle
 	if [ $? != 0 ] ; then
                  exit $?
         fi
-	make -j 4
+	make
 	if [ $? != 0 ] ; then
 	         exit $?
 	fi
@@ -155,11 +155,11 @@ function setup_mysql
 	if [ -d /var/lib/mysql/ ] ; then
 		return;
 	fi
-        yum -y install mysql-server
+        yum -y install MariaDB-client MariaDB-server MariaDB-devel
         if [ $? != 0 ] ; then
                 exit $?
         fi
-        /etc/init.d/mysqld start
+        /etc/init.d/mysql start
 #	cat <<mayday
 #       =========================================
 #       please enter you  mysql root passwd:
@@ -174,7 +174,7 @@ function setup_mysql
 #        else
 #                echo "mysql-server is install success"
 #        fi
-	chkconfig mysqld on
+	chkconfig mysql on
 }
 #setup php
 function setup_php
@@ -249,7 +249,7 @@ function setup_easypanel
 		fi
 	fi
 	#install mysql bin 
-	yum -y install mysql
+	yum -y install MariaDB-client MariaDB-server MariaDB-devel MariaDB
 	# 1.6.3 add mysql && mysqldump to /vhs/kangle/bin
 	if [ ! -f /vhs/kangle/bin/mysql ] ; then
                 ln -s /usr/bin/mysql /vhs/kangle/bin/mysql
@@ -287,7 +287,7 @@ function setup_pureftpd
 	tar xzf $WGET_NEW_NAME
 	cd pure-ftpd-$PUREFTP_VERSION
 	./configure --prefix=/vhs/pure-ftpd with --with-extauth --with-throttling --with-peruserlimits
-	make -j 4
+	make
 	if [ $? != 0 ] ; then 
 		exit $?
 	fi
