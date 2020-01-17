@@ -218,7 +218,7 @@ function setup_easypanel
 	chmod 700 $PREFIX/etc $PREFIX/var $PREFIX/nodewww/data	
 	rm -rf easypanel-$EASYPANEL_VERSION-$SYS
 	rm -rf easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz
-	EASYPANEL_URL="$DOWNLOAD_BASE_URL/easypanel/easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz"
+	EASYPANEL_URL="$DOWNLOAD_BASE_URLkangle/easypanel/easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz"
 	EA_FILE_NAME="easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz"
 	wget $EASYPANEL_URL -O $EA_FILE_NAME -c
 	if [ $? != 0 ] ; then
