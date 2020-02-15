@@ -3,7 +3,7 @@ yum -y install bzip2-devel libxml2-devel curl-devel db4-devel libjpeg-devel libp
 yum -y install mhash-devel openssl-devel
 yum -y install libtool-ltdl libtool-ltdl-devel
 yum -y remove libzip-devel
-wget -c https://github.kangle.icu/php/source/7.3/libzip-1.3.2.tar.gz -O libzip-1.3.2.tar.gz
+wget -c https://github.phxc8.com/php/source/7.3/libzip-1.3.2.tar.gz -O libzip-1.3.2.tar.gz
 tar xvf libzip-1.3.2.tar.gz
 cd libzip-1.3.2
 ./configure
