@@ -100,7 +100,7 @@ function setup_kangle
 	if [  -f kangle-$KANGLE_VERSION.tar.gz ] ; then
 		rm -f kangle-$KANGLE_VERSION.tar.gz
 	fi	
-	wget $KANGLE_URL 
+	wget --no-check-certificate $KANGLE_URL 
 	if [ $? != 0 ] ; then
 		exit $?
 	fi
@@ -220,7 +220,7 @@ function setup_easypanel
 	rm -rf easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz
 	EASYPANEL_URL="$DOWNLOAD_BASE_URL/kangle/easypanel/easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz"
 	EA_FILE_NAME="easypanel-$EASYPANEL_VERSION-$SYS-$SYSVERSION.tar.gz"
-	wget $EASYPANEL_URL -O $EA_FILE_NAME -c
+	wget --no-check-certificate $EASYPANEL_URL -O $EA_FILE_NAME -c
 	if [ $? != 0 ] ; then
         	exit $?
 	fi
@@ -276,9 +276,9 @@ function setup_pureftpd
 	del_proftpd
 	DOWN_URL="$DOWNLOAD_BASE_URL/kangle/easypanel/source/pure-ftpd-$PUREFTP_VERSION.tar.gz"
 	WGET_NEW_NAME="pure-ftpd-$PUREFTP_VERSION.tar.gz"
-	wget $DOWN_URL -O $WGET_NEW_NAME -c
+	wget --no-check-certificate $DOWN_URL -O $WGET_NEW_NAME -c
 	if [ $? != 0 ] ; then 
-		wget $K_DOWN_URL -o $WGET_NEW_NAME
+		wget --no-check-certificate $K_DOWN_URL -o $WGET_NEW_NAME
 		if [ $? != 0 ] ; then
 			echo $? "wget pureftp failed,please manuanl setup pureftp"
 			exit
@@ -360,49 +360,49 @@ write_partner
 if [ ! -f /etc/php.d/ioncube.ini ] ; then
 	\cp /vhs/kangle/bin/ioncube.ini /etc/php.d/ioncube.ini
 fi
-wget  http://localhost:3312/upgrade.php -O /dev/null -q
+wget --no-check-certificate  http://localhost:3312/upgrade.php -O /dev/null -q
 rm -rf /vhs/kangle/www/index.html
-wget https://github.kangle.icu/easypanel/index.html -O /vhs/kangle/www/index.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/index.html -O /vhs/kangle/www/index.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/kfinfo.html
-wget https://github.kangle.icu/easypanel/kfinfo.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/kfinfo.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/kfinfo.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/kfinfo.html
 rm -rf /vhs/kangle/nodewww/dbadmin/mysql/main.php
-wget https://github.kangle.icu/easypanel/main.php -O /vhs/kangle/nodewww/dbadmin/mysql/main.php
+wget --no-check-certificate https://github.kangle.icu/easypanel/main.php -O /vhs/kangle/nodewww/dbadmin/mysql/main.php
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/common/product.html
-wget https://github.kangle.icu/easypanel/product.html -O /vhs/kangle/nodewww/webftp/admin/view/default/common/product.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/product.html -O /vhs/kangle/nodewww/webftp/admin/view/default/common/product.html
 rm -rf /vhs/kangle/ext/webalizer.xml
-wget https://github.kangle.icu/easypanel/log_gz.xml -O /vhs/kangle/ext/log_gz.xml
+wget --no-check-certificate https://github.kangle.icu/easypanel/log_gz.xml -O /vhs/kangle/ext/log_gz.xml
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/top.html
-wget https://github.kangle.icu/easypanel/top.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/top.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/top.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/top.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/cacheclean/cachecleanfrom.html
-wget https://github.kangle.icu/easypanel/cachecleanfrom.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/cacheclean/cachecleanfrom.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/cachecleanfrom.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/cacheclean/cachecleanfrom.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/nodes/addnode.html
-wget https://github.kangle.icu/easypanel/addnode.html -O /vhs/kangle/nodewww/webftp/admin/view/default/nodes/addnode.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/addnode.html -O /vhs/kangle/nodewww/webftp/admin/view/default/nodes/addnode.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/scripts/func.js
-wget https://github.kangle.icu/easypanel/func.js -O /vhs/kangle/nodewww/webftp/admin/view/default/scripts/func.js
+wget --no-check-certificate https://github.kangle.icu/easypanel/func.js -O /vhs/kangle/nodewww/webftp/admin/view/default/scripts/func.js
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/virtualhost/virtualhost.html
-wget https://github.kangle.icu/easypanel/virtualhost.html -O /vhs/kangle/nodewww/webftp/admin/view/default/virtualhost/virtualhost.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/virtualhost.html -O /vhs/kangle/nodewww/webftp/admin/view/default/virtualhost/virtualhost.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/cnzz.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/cnzz.html
-wget https://github.kangle.icu/easypanel/cnzz.html -O /vhs/kangle/nodewww/webftp/admin/cnzz.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/cnzz.html -O /vhs/kangle/nodewww/webftp/admin/cnzz.html
 \cp -f /vhs/kangle/nodewww/webftp/admin/cnzz.html /vhs/kangle/nodewww/webftp/vhost/cnzz.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/common/foot.html
-wget https://github.kangle.icu/easypanel/admin/foot.html -O /vhs/kangle/nodewww/webftp/admin/view/default/common/foot.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/admin/foot.html -O /vhs/kangle/nodewww/webftp/admin/view/default/common/foot.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/main.html
-wget https://github.kangle.icu/easypanel/admin/main.html -O /vhs/kangle/nodewww/webftp/admin/view/default/main.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/admin/main.html -O /vhs/kangle/nodewww/webftp/admin/view/default/main.html
 rm -rf /vhs/kangle/nodewww/webftp/admin/view/default/login_error.html
-wget https://github.kangle.icu/easypanel/admin/login_error.html -O /vhs/kangle/nodewww/webftp/admin/view/default/login_error.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/admin/login_error.html -O /vhs/kangle/nodewww/webftp/admin/view/default/login_error.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/common/foot.html
-wget https://github.kangle.icu/easypanel/vhost/foot.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/common/foot.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/vhost/foot.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/common/foot.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/common/head.html
-wget https://github.kangle.icu/easypanel/vhost/head.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/common/head.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/vhost/head.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/common/head.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/login.html
-wget https://github.kangle.icu/easypanel/vhost/login.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/login.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/vhost/login.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/login.html
 rm -rf /vhs/kangle/nodewww/webftp/vhost/view/default/loginerror.html
-wget https://github.kangle.icu/easypanel/vhost/loginerror.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/loginerror.html
+wget --no-check-certificate https://github.kangle.icu/easypanel/vhost/loginerror.html -O /vhs/kangle/nodewww/webftp/vhost/view/default/loginerror.html
 rm -rf /vhs/kangle/ext/tpl_php52/php-templete.ini
-wget https://github.kangle.icu/easypanel/php-templete.ini -O /vhs/kangle/ext/tpl_php52/php-templete.ini
+wget --no-check-certificate https://github.kangle.icu/easypanel/php-templete.ini -O /vhs/kangle/ext/tpl_php52/php-templete.ini
 rm -rf /vhs/kangle/ext/tpl_php52/etc/php-node.ini
-wget https://github.kangle.icu/easypanel/php-node.ini -O /vhs/kangle/ext/tpl_php52/etc/php-node.ini
+wget --no-check-certificate https://github.kangle.icu/easypanel/php-node.ini -O /vhs/kangle/ext/tpl_php52/etc/php-node.ini
 $PREFIX/bin/kangle -q
 killall -9 kangle
 sleep 3
